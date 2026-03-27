@@ -138,12 +138,20 @@ export default function AdminJugadoresPage() {
       <section className="mx-auto w-full max-w-2xl px-4 py-6 sm:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h1 className="text-2xl font-bold sm:text-3xl">Admin - Jugadores</h1>
-          <button
-            onClick={handleLogout}
-            className="w-full rounded-md border border-zinc-700 px-4 py-2 text-sm sm:w-auto"
-          >
-            Cerrar sesion
-          </button>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <button
+              onClick={() => router.push("/admin/clips")}
+              className="w-full rounded-md border border-zinc-700 px-4 py-2 text-sm sm:w-auto"
+            >
+              Ir a Clips
+            </button>
+            <button
+              onClick={handleLogout}
+              className="w-full rounded-md border border-zinc-700 px-4 py-2 text-sm sm:w-auto"
+            >
+              Cerrar sesion
+            </button>
+          </div>
         </div>
 
         {error ? (
